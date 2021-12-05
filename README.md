@@ -1,4 +1,4 @@
-# Project Name
+# The Book Shelf of a Dreamer
 
 A website for book lovers. The website offers Reading Lists compiled of various book titles to satisfy different kinds of readers. The Literature club holds online and in-person discussions of books each week. There is also a variety of articles to read.
 
