@@ -1,0 +1,524 @@
+/*
+Style Name: HTML Atributes & Forms 
+Description: Class File
+Author: Alexandra Lem
+Version: 1.0
+Tags: Learning HTML
+*/
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* ___________________________________________
+
+       CSS Guide
+___________________________________________ */
+
+/* 01. General Styles
+       - Reset
+       - Global
+         - General
+         - Floats
+         - Brand Colors
+         - Font Awesome                       
+   02. CSS Grid
+   03. Site Header
+       - Header
+       - Nav
+   04. Hero
+       - Image
+       - Title
+   05. Floats                       
+/* _____________________________________
+
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+/* -------------
+  Reset
+-------------*/
+
+   body {
+      margin: 0;
+      padding: 0;
+      color: #626262;
+      font-family: 'Sanchez', serif;
+   }
+
+/* -------------
+  Global
+-------------*/
+
+   /*------------ General ------------*/
+
+   .hidden {
+      display: none;
+   }
+
+
+   .box-model {
+      margin: 1rem;
+      padding: 1rem;
+      background: #000;
+   }
+
+   .lg-font {
+      font-size: 1.25em;
+   }
+
+   
+
+   /*------------ End General ------------*/
+
+   /*------------ Floats ------------*/
+   /*------------ End Floats ------------*/
+
+   /*------------ Brand Colours ------------*/
+   /*------------ End Brand Colours ------------*/
+   
+   /*------------ Font Awesome ------------*/
+   /*------------ End Font Awesome ------------*/
+
+/* _____________________________________
+
+   02. CSS Grid
+   _____________________________________ */
+
+   @supports (grid-area: auto) {
+
+      .site {
+         max-width: none;
+      }
+
+      /*------------ Grid Items ------------*/
+
+      .head > *, .main > *, .foot > * {
+         display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+      }
+      
+      .one-item {
+         display: grid;
+         grid-column: 2 / span 2;
+         grid-template-columns: 1fr;
+      }
+
+      .two-items {
+         display: grid;
+         grid-column: 2 / span 2;
+         grid-template-columns: repeat(2, 1fr);
+         justify-content: space-evenly;
+         row-gap: 2em;
+         column-gap: 2em;
+      }
+
+      .three-items {
+         display: grid;
+         grid-column: 2 / span 2;
+         grid-template-columns: repeat(3, 1fr);
+         justify-content: space-evenly;
+         row-gap: 2em;
+         column-gap: 2em;
+      }
+
+
+      /*------------ End Grid Items ------------*/
+
+/* _____________________________________
+
+   03. Site Header
+   _____________________________________ */
+
+   .logo {
+      display: grid;
+      grid-column: 2 / span 2;
+   }
+
+   /*.logo > * {
+      grid-column: 1;
+      grid-row: 1;*/
+   }
+
+   .logo-box {
+      margin: 0rem;
+      padding: 1rem;
+      background: #000;
+      height: 8em;
+      background-color: #0C082B;
+   }
+
+   .logo img {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .nav {
+      grid-column: 1 / span 4;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      text-align: center;
+      margin: 0;
+      background-color: #0C082B;
+      padding: 2em;
+      border-top: 2px solid white;
+   }
+
+   .nav ul {
+      text-decoration: none;
+   }
+
+   nav li a {
+      text-decoration: none;
+      font-size: 1.5em;
+      color: white;
+   }
+
+   nav li a:hover {
+      padding-bottom: .5em;
+      border-bottom: 3px solid grey;
+   }
+
+   .active {
+      color: #cdb373;
+   }
+
+   .nav li {
+      display: inline;
+   }
+
+      /*------------- End Site Header ------------*/
+
+/* _____________________________________
+
+   04. Hero
+   _____________________________________ */
+
+   .hero {
+      margin: 0;
+   }
+
+   .hero-img img {
+      width: 100%;
+   }
+
+   .hero-img {
+      display: grid;
+      grid-column: span 4;
+      margin-bottom: 1rem;
+
+   }
+
+   .hero-img > * {
+      grid-column: 1;
+      grid-row: 1;
+   }
+
+   .hero-img h2 {
+      font-size: 5em;
+      color: white;
+      align-self: center;
+      justify-self: start;
+      margin-left: 2em;
+      width: 15em;
+
+   }
+
+   .hero-img p {
+      font-size: 2em;
+      color: white;
+      align-self: end;
+      justify-self: start;
+      margin-left: 5em;
+      margin-bottom: 3em;
+      width: 15em;
+   }
+
+
+
+   
+
+   
+
+
+      /*------------ Title Styles ------------*/
+
+
+
+  
+      /*------------ End Hero ------------*/
+
+
+/* _____________________________________
+
+   05. Who we are
+   _____________________________________ */
+
+
+   .venzel-down img {
+      width: 50%;
+      display: block;
+      margin:  1em auto 3em;
+      
+   }
+
+   .venzel-up img {
+      width: 50%;
+      display: block;
+      margin:  3em auto 1em;
+      
+   }
+
+
+
+   .welcome-text {
+      font-size: 1.5em;
+      color: #0C082B;
+      margin: 1em;
+      text-align: center;
+   }
+
+   #quote-text {
+      font-size: 1em;
+      color: white;
+      align-self: center;
+      justify-self: center;
+      width: 5em;
+   }
+
+   #quote-text2 {
+      font-size: 1em;
+      color: white;
+      align-self: center;
+      justify-self: start;
+      width: 15em;
+   }
+
+   .posts {
+      font-size: 1.5em;
+      color: #0C082B;
+      margin: 1em;
+      text-align: center;
+   }
+
+   .post-text {
+      font-size: 1.5em;
+      color: #0C082B;
+      margin: 1em;
+      text-align: center;
+      margin: 0;
+      
+   }
+
+   .post-text a {
+      text-decoration: none;
+
+   }
+
+   .post-text a:hover {
+      color: #cdb373;
+      text-decoration: none;
+   }
+
+   .post-img {
+      margin: 0;
+   }
+
+   h3 {
+      margin: 0;
+   }
+
+
+
+      
+/* _____________________________________
+
+   06. Posts
+   _____________________________________ */
+      
+.load-button {
+   margin: 0;
+   text-align: center;
+   font-size: 2em;
+   background-color: #cdb373;
+   color: white;
+   border-radius: 10px;
+   border-color: #cdb373;
+}
+
+.button-box {
+   margin: 3em auto;
+
+}
+/* _____________________________________
+
+   07. Footer
+   _____________________________________ */
+      .foot {
+         background-color: #0C082B;
+
+      }
+
+      footer nav a {
+         display: block;
+         text-decoration: none;
+         color: white;
+         margin: 1em;
+         width: max-content;
+      }
+
+      footer nav a:hover {
+         border-bottom: 1px solid white;
+      }
+
+      .address {
+         color: white;
+         margin: 1em;
+      }
+
+      .footer-nav {
+         display: grid;
+         grid-column: 2 / span 2;
+         grid-template-columns: repeat(2, 3em);
+         justify-content: space-evenly;
+      }
+
+      p span {
+         font-size: 7em;
+         color: #cdb373;
+      }
+
+      form {
+         background-color: blue;
+         margin: 1em auto 3em;
+         color: white;
+         width: 40em;
+      }
+      
+      
+
+
+      input, textarea {
+         margin-left: 1em;
+      }
+
+      textarea {
+         width: 46em;
+         height: 18em;
+      }
+
+      label {
+         margin-left: 1em;
+         margin-top: 1em;
+      }
+
+      input[type="submit"] {
+         width: 6em;
+         margin: 1.5em auto;
+         font-size: 1.2em;
+         border-radius: 7px;
+         border-color: #cdb373;
+         background-color: #cdb373;
+         color: blue;
+
+      }
+
+      .ask-text {
+         text-align: center;
+         color: #cdb373;
+         font-size: 2em;
+         margin-bottom: 0.3em;
+
+      }
+
+      .review-text {
+         text-align: center;
+         color: blue;
+         font-size: 1.2em;
+         width: 35em;
+         margin: 0.5em auto;
+         padding: 0;
+      }
+
+      .about > * {
+         display: grid;
+      }
+      .about-heading {
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .events-override {
+         display: grid;
+         grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+         grid-column: 1 / span 4;
+         background-color: blue;
+         color: white;
+
+      }
+
+      .calendar {
+       background-color:#cdb373;
+       width: max-content;
+       text-align: center;
+       width: 17em;
+      }
+
+      table {
+         background-color: white;
+         width: max-content;
+         color: black;
+         margin-left: auto;
+         margin-right: auto;
+         /*border: 1em solid #cdb373;*/
+      }
+
+      .images-override {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         grid-column: 1 / span 4;
+         background: white;
+         border: 1px solid black;
+         height: 300px;
+      }
+
+
+
+
+
+   
+
