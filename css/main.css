@@ -267,18 +267,6 @@ ___________________________________________ */
       margin-bottom: 3em;
       width: 15em;
    }
-
-
-
-   
-
-   
-
-
-      /*------------ Title Styles ------------*/
-
-
-
   
       /*------------ End Hero ------------*/
 
@@ -361,9 +349,6 @@ ___________________________________________ */
    h3 {
       margin: 0;
    }
-
-
-
       
 /* _____________________________________
 
@@ -430,7 +415,8 @@ ___________________________________________ */
       }
       
       
-
+   /* 2. Article Page
+   _____________________________________ */
 
       input, textarea {
          margin-left: 1em;
@@ -474,6 +460,10 @@ ___________________________________________ */
          padding: 0;
       }
 
+      
+   /* 3. Literary Club
+   _____________________________________ */
+
       .about > * {
          display: grid;
       }
@@ -486,7 +476,7 @@ ___________________________________________ */
          display: grid;
          grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
          grid-column: 1 / span 4;
-         background-color: blue;
+         background-color: rgb(58, 58, 59);
          color: white;
 
       }
@@ -507,14 +497,7 @@ ___________________________________________ */
          /*border: 1em solid #cdb373;*/
       }
 
-      .images-override {
-         display: grid;
-         grid-template-columns: repeat(4, 1fr);
-         grid-column: 1 / span 4;
-         background: white;
-         border: 1px solid black;
-         height: 300px;
-      }
+      
 
 
 
